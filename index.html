@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Altair Design #11</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/style.css" class="style">
+	<link href='http://fonts.googleapis.com/css?family=Exo:400,500,600' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+</head>
+<body class="clearfix hover">
+	<a href="#" id="top"></a>
+	<header>
+		<h1>Altair Design #11</h1>
+		<img src="img/header.svg" alt="">
+	</header>
+	<div class="fixedMenu">
+		<div class="menuContainer">
+			<div class="menu clearfix">
+				<div class="menuIcon">  
+					<img src="img/menu.svg" alt="">
+				</div>
+				<ul class="topNav">
+					<li>
+						<a href="#about">About Altair Designs</a>
+					</li>
+					<li>
+						<a href="#top">Other Altair Projects</a>
+						<ul class="dropdown">
+							<li><a href="">Altair Design #1</a></li>
+							<li><a href="">Altair Design #2</a></li>
+							<li><a href="">Altair Design #3</a></li>
+							<li><a href="">Altair Design #4</a></li>
+							<li><a href="">Altair Design #5</a></li>
+							<li><a href="">Altair Design #6</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#footer">Contact Me</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper clearfix">
+		<h2 class="firstTitle">SVG with CSS Hover Transform</h2>
+		<div class="artFlex">
+			<div class="artBox">
+				<img src="img/hotElement.svg" id="hotElement" class="inject-me" alt="">
+				<p>Two layers with offset opacity changes</p>
+			</div>
+			<div class="artBox">
+				<img src="img/circusWheels.svg" id="circusWheels" class="inject-me" alt="">		
+				<p>2d rotating groups with transform-origin</p>
+			</div>
+			<div class="artBox">
+				<img src="img/macrame.svg" id="macrame" class="inject-me" alt="">			
+				<p>Rotating groups with color and opacity changes</p>
+			</div>
+			<div class="artBox">
+				<img src="img/threeHearts.svg" id="threeHearts" class="inject-me" alt="">			
+				<p>2d rotating layers</p>
+			</div>
+			<div class="artBox">
+				<img src="img/moth.svg" id="moth" class="inject-me" alt="">	
+				<p>Three layers with 2d and 3d rotation and opacity changes</p>
+			</div>
+			<div class="artBox">
+				<img src="img/flowerCube.svg" id="flowerCube" class="inject-me" alt="">
+				<p>3d rotations with color and opacity changes</p>
+			</div>
+		</div>
+		<a class="fixedHeaderAnchor" id="about" href=""></a>
+		<div class="dots">
+			<img src="img/menu.svg" alt="">
+			<img src="img/menu.svg" alt="">
+			<img src="img/menu.svg" alt="">
+		</div>
+		<section class="about">
+			<h2>My Altair Design Story</h2>
+			<p>When I was around six, on one of our family trips to the Science Centre, my Mom bought me a mind-altering coloring book. It was a set of geometric patterns that were co-created by Ensor Holiday and Roger Burrows, a biologist and a writer/designer. The patterns are based on a form of Islamic design that features closely packed circles of varying sizes. They are called Altair designs and were published in a series of four coloring books through the seventies.</p>
+			<p>Eventually, my book was packed away with all the other stuff I had outgrown, and by the time I had my first nostalgic memory of it, it was long gone. Then, a couple of years ago, I stepped into a random vintage store on a break from work and there was <span class="bookTitle">More Altair Designs</span>, first edition, but in far better shape than I had last seen my original copy. </p>
+			<p>The designs above were derived from a JPEG image of an Altair Design #11 page. The image was converted to vectors in Illustrator, but needed a lot of hand-done adjustments before being used as inline SVG. As a result, the patterns are mathematically imperfect and you will probably notice little anomalies here and there if you look carefully.</p>
+		</section>
+	</div>
+	<footer id="footer" class="clearfix">
+		<div class="twitterIcon">
+			<a href="http://twitter.com/amycatburrows">
+				<i class="fa fa-twitter"></i>
+			</a>
+		</div>
+		<p>Amy Burrows &copy; 2015</p>
+	</footer>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+		$(function() {
+		  $('a[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html,body').animate({
+		          scrollTop: target.offset().top
+		        }, 1000);
+		        return false;
+		      }
+		    }
+		  });
+		});
+	</script>
+	<script src="js/svg-injector.min.js"></script>
+	<script>document.addEventListener("touchstart", function(){}, true);</script>
+</body>
+</html>

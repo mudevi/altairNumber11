@@ -1,0 +1,2070 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: 0;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: \201C \201D \2018 \2019;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, figure {
+  margin: 0;
+}
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+svg:hover g,
+svg:hover polygon,
+svg:active g, svg:active polygon, #flowerCube:hover polygon, #flowerCube:hover g {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+  will-change: opacity, fill, transform;
+}
+
+#circusWheels .st8,
+#circusWheels .st9,
+#circusWheels .st10,
+#circusWheels .st11,
+#circusWheels .st12, #circusWheels .st13, #circusWheels .st14 {
+  transition: fill 6s ease, opacity 5s ease 2s;
+  -webkit-transition: fill 6s ease, opacity 5s ease 2s;
+  -moz-transition: fill 6s ease, opacity 5s ease 2s;
+  -o-transition: fill 6s ease, opacity 5s ease 2s;
+  -ms-transition: fill 6s ease, opacity 5s ease 2s;
+}
+
+.artFlex, .dots {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*Main Styles*********************************************************************************************************/
+body {
+  background-color: #000;
+  font-family: "Source Sans Pro", Futura, Arial, sans-serif;
+}
+
+header {
+  height: 175px;
+  background-color: #333;
+  padding: 35px 95px 35px 60px;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 8;
+  overflow: hidden;
+  opacity: .97;
+}
+
+header img {
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  top: -80px;
+  left: 8px;
+  background-color: transparent;
+  z-index: -1;
+  opacity: 1;
+}
+
+.wrapper {
+  margin: 220px 95px 80px 60px;
+  background-color: beige;
+  border-radius: 5px;
+  padding: 40px 20px;
+  max-width: 1280px;
+  position: relative;
+}
+
+.artFlex {
+  width: 100%;
+  max-width: 1260px;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.artBox {
+  width: calc(33.3333% - 20px);
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  -o-flex: 1;
+  flex: 1;
+  -webkit-flex-basis: auto;
+  -moz-flex-basis: auto;
+  -ms-flex-basis: auto;
+  -o-flex-basis: auto;
+  flex-basis: auto;
+  background-color: black;
+  border-radius: 10px;
+  margin: 10px 10px 40px;
+  padding: 35px;
+}
+
+.artBox p {
+  background-color: #222;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.artBox p {
+  color: beige;
+  text-align: center;
+}
+
+svg {
+  font-size: 0;
+  width: 105%;
+  height: 100%;
+  margin-bottom: 20px;
+  position: relative;
+  left: -6px;
+}
+
+.hover {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -moz-touch-callout: none;
+  -ms-touch-callout: none;
+  -o-touch-callout: none;
+  touch-callout: none;
+}
+
+.dots {
+  width: 25%;
+  max-width: 200px;
+  margin: 0 auto;
+  padding-top: 80px;
+  clear: left;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.dots img {
+  width: 30px;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-transition: 2s ease;
+  -moz-transition: 2s ease;
+  -o-transition: 2s ease;
+  transition: 2s ease;
+}
+
+.dots img:nth-child(2) {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: 2s ease;
+  -moz-transition: 2s ease;
+  -o-transition: 2s ease;
+  transition: 2s ease;
+}
+
+.dots img:hover {
+  -webkit-transform: rotate(720deg);
+  -moz-transform: rotate(720deg);
+  -ms-transform: rotate(720deg);
+  -o-transform: rotate(720deg);
+  transform: rotate(720deg);
+}
+
+#top {
+  position: absolute;
+  top: -150px;
+}
+
+.about {
+  text-align: center;
+  float: left;
+  margin: 0px auto 30px;
+  border-radius: 5px;
+  padding: 0 30px;
+}
+
+.about p {
+  margin: 20px 30px;
+  font-size: 16px;
+}
+
+footer {
+  font-size: 26px;
+  height: 150px;
+  background-color: #333;
+  text-align: center;
+  overflow: hidden;
+}
+
+footer a i {
+  font-size: 30px;
+  color: #666;
+}
+
+footer p {
+  width: 125px;
+  margin: auto;
+  clear: both;
+  color: #666;
+  font-size: 12px;
+}
+
+.twitterIcon {
+  width: 30px;
+  height: 30px;
+  margin: 70px auto 5px;
+}
+
+/*Fixed Menu*****************************************************************************************************************/
+.fixedMenu {
+  position: fixed;
+  width: 75px;
+  right: 0;
+  top: 220px;
+  z-index: 10;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.fixedMenu:hover {
+  width: 550px;
+  -webkit-transition: 1s ease 0.4s;
+  -moz-transition: 1s ease 0.4s;
+  -o-transition: 1s ease 0.4s;
+  transition: 1s ease 0.4s;
+}
+
+.fixedMenu:hover .menu {
+  -webkit-transition: 1s ease 0.4s;
+  -moz-transition: 1s ease 0.4s;
+  -o-transition: 1s ease 0.4s;
+  transition: 1s ease 0.4s;
+  right: 0px;
+  box-shadow: -2px 2px 3px #888888;
+}
+
+.fixedMenu:hover .menuContainer {
+  overflow: visible;
+}
+
+.fixedMenu:hover img {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  -moz-transition: -moz-transform 0.3s ease;
+  -o-transition: -o-transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.menuContainer {
+  position: relative;
+  overflow: hidden;
+  height: 78px;
+}
+
+.menu {
+  background-color: beige;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 550px;
+  height: 75px;
+  position: absolute;
+  left: 4px;
+  right: -482px;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease;
+  box-shadow: -2px 2px 3px #888888;
+}
+
+.menu ul {
+  list-style-type: none;
+}
+
+.menu li {
+  position: relative;
+  display: inline;
+}
+
+.menu li:hover ul {
+  opacity: 1;
+  box-shadow: -2px 2px 3px #888888;
+  z-index: -1;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-family: "Exo", sans-serif;
+  font-weight: 700;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.menu a:hover {
+  color: #CE4646;
+}
+
+.menuIcon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0;
+  padding-top: 18px;
+  padding-left: 16px;
+  -webkit-transition: 0.3s ease 0.4s;
+  -moz-transition: 0.3s ease 0.4s;
+  -o-transition: 0.3s ease 0.4s;
+  transition: 0.3s ease 0.4s;
+}
+
+.menuIcon img {
+  width: 40px;
+  height: 40px;
+}
+
+.menuIcon:hover img {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+/*Dropdown Menu**********************************/
+.topNav {
+  margin-top: 27px;
+}
+
+.topNav > li > a {
+  padding: 27px 7px;
+}
+
+.topNav > li:first-child {
+  margin-left: 40px;
+}
+
+.topNav li:nth-child(2):hover .dropdown {
+  z-index: +1;
+}
+
+.dropdown {
+  opacity: 0;
+  position: absolute;
+  left: -5px;
+  top: 48px;
+  width: 182px;
+  background-color: beige;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-left: 0;
+  -webkit-transition: opacity 0.7s ease;
+  -moz-transition: opacity 0.7s ease;
+  -o-transition: opacity 0.7s ease;
+  transition: opacity 0.7s ease;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: -2px 2px 3px #888888;
+}
+
+.dropdown li {
+  display: list-item;
+  height: 2rem;
+  position: relative;
+}
+
+.dropdown a {
+  position: relative;
+  padding: 5px 30px;
+  display: inline-block;
+}
+
+a.fixedHeaderAnchor {
+  position: relative;
+  float: left;
+  visibility: hidden;
+  display: inline;
+  height: 2px;
+  width: 2px;
+  top: -150px;
+}
+
+/*Type*********************************************************************************************************************/
+h1, h2 {
+  font-family: "Exo", Arial, sans-serif;
+}
+
+h1 {
+  float: right;
+  color: beige;
+  font-size: 3rem;
+  margin-top: 50px;
+  z-index: 10;
+}
+
+h2 {
+  color: #000;
+  margin-top: 40px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+h2.firstTitle {
+  margin-left: 10px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+h2:not(.firstTitle) {
+  margin-top: 10px;
+}
+
+span.bookTitle {
+  text-decoration: underline;
+}
+
+/*SVG Colors**************************************************************************************************************/
+.colors1 .st0 {
+  fill: #477182;
+}
+
+.colors1 .st1 {
+  fill: #7C7D80;
+}
+
+.colors1 .st2 {
+  fill: #ACADB0;
+}
+
+.colors1 .st3 {
+  fill: #809EAD;
+}
+
+.colors1 .st4 {
+  fill: #887EA7;
+}
+
+.colors1 .st5 {
+  fill: #5F7C38;
+}
+
+.colors1 .st6 {
+  fill: #C38A6D;
+}
+
+.colors1 .st7 {
+  fill: #956768;
+}
+
+.colors1 .st8 {
+  fill: #2D5368;
+}
+
+.colors1 .st9 {
+  fill: #662266;
+}
+
+.colors1 .st10 {
+  fill: #D796A5;
+}
+
+.colors1 .st11 {
+  fill: #D8D13C;
+}
+
+.colors1 .st12 {
+  fill: mediumturquoise;
+}
+
+.colors1 .st13 {
+  fill: coral;
+}
+
+.colors1 .st14 {
+  fill: cornflowerblue;
+}
+
+.reds .st0 {
+  fill: #AA3A13;
+}
+
+.reds .st1 {
+  fill: #AD1212;
+}
+
+.reds .st2 {
+  fill: #E05424;
+}
+
+.reds .st3 {
+  fill: #E06A46;
+}
+
+.reds .st4 {
+  fill: #E24723;
+}
+
+.reds .st5 {
+  fill: #892727;
+}
+
+.reds .st6 {
+  fill: #956768;
+}
+
+.reds .st7 {
+  fill: #99321A;
+}
+
+.reds .st8 {
+  fill: #C9360E;
+}
+
+.reds .st9 {
+  fill: #9B4C4C;
+}
+
+.reds .st10 {
+  fill: #CC6666;
+}
+
+.reds .st11 {
+  fill: #CC704C;
+}
+
+.reds .st12 {
+  fill: #CE604A;
+}
+
+.reds .st13 {
+  fill: #A84E36;
+}
+
+.reds .st14 {
+  fill: #A8603D;
+}
+
+.redsBlues .st0 {
+  fill: #E05424;
+}
+
+.redsBlues .st1 {
+  fill: #E06A46;
+}
+
+.redsBlues .st2 {
+  fill: #E24723;
+}
+
+.redsBlues .st3 {
+  fill: #23B3B3;
+}
+
+.redsBlues .st4 {
+  fill: #26D8D8;
+}
+
+.redsBlues .st5 {
+  fill: #CC704C;
+}
+
+.redsBlues .st6 {
+  fill: #CE604A;
+}
+
+.redsBlues .st7 {
+  fill: #0081B3;
+}
+
+.redsBlues .st8 {
+  fill: #0083C2;
+}
+
+.redsBlues .st9 {
+  fill: #008EB9;
+}
+
+.redsBlues .st10 {
+  fill: #0097B5;
+}
+
+.redsBlues .st11 {
+  fill: #009999;
+}
+
+.redsBlues .st12 {
+  fill: #009FC9;
+}
+
+.redsBlues .st13 {
+  fill: #00A3DB;
+}
+
+.redsBlues .st14 {
+  fill: #00AFEC;
+}
+
+.redsBlues .st15 {
+  fill: #00B3DC;
+}
+
+.redsBlues .st16 {
+  fill: #00EDED;
+}
+
+.redsBlues .st17 {
+  fill: #3ECCE2;
+}
+
+.redsBlues .st18 {
+  fill: #A1E1E8;
+}
+
+.redsBlues .st19 {
+  fill: #A55137;
+}
+
+.redsBlues .st20 {
+  fill: #DD816C;
+}
+
+.redsBlues .st21 {
+  fill: #449896;
+}
+
+.greens .st10 {
+  fill: #406325;
+}
+
+.greens .st11 {
+  fill: #B8C698;
+}
+
+.greens .st12 {
+  fill: #BCCD30;
+}
+
+.greens .st4 {
+  fill: #25351A;
+}
+
+.greens .st5 {
+  fill: #274936;
+}
+
+.greens .st6 {
+  fill: #5E7B38;
+}
+
+.greens .st8 {
+  fill: #406325;
+}
+
+.greens .st13 {
+  fill: #B8C698;
+}
+
+.greens .st7 {
+  fill: #BCCD30;
+}
+
+.greens2 .st1 {
+  fill: #406325;
+}
+
+.greens2 .st2 {
+  fill: #B8C698;
+}
+
+.greens2 .st3 {
+  fill: #BCCD30;
+}
+
+.greens2 .st4 {
+  fill: #5D8A3F;
+}
+
+.greens2 .st5 {
+  fill: #274936;
+}
+
+.greens2 .st6 {
+  fill: #5E7B38;
+}
+
+.greens2 .st8 {
+  fill: #5D8A3F;
+}
+
+.greens2 .st0 {
+  fill: #649257;
+}
+
+.greens2 .st7 {
+  fill: #006031;
+}
+
+/*SVG 1*********************************************************************************************************************/
+#hotElement .redLayer .st1 {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease 0.7s;
+  -moz-transition: opacity 0.5s ease 0.7s;
+  -o-transition: opacity 0.5s ease 0.7s;
+  transition: opacity 0.5s ease 0.7s;
+}
+
+#hotElement .redLayer .st5 {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease 0.6s;
+  -moz-transition: opacity 0.5s ease 0.6s;
+  -o-transition: opacity 0.5s ease 0.6s;
+  transition: opacity 0.5s ease 0.6s;
+}
+
+#hotElement .redLayer .st6 {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease 0.5s;
+  -moz-transition: opacity 0.5s ease 0.5s;
+  -ms-transition: opacity 0.5s ease 0.5s;
+  -o-transition: opacity 0.5s ease 0.5s;
+  transition: opacity 0.5s ease 0.5s;
+}
+
+#hotElement .redLayer .st19 {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease 0.4s;
+  -moz-transition: opacity 0.5s ease 0.4s;
+  -ms-transition: opacity 0.5s ease 0.4s;
+  -o-transition: opacity 0.5s ease 0.4s;
+  transition: opacity 0.5s ease 0.4s;
+}
+
+#hotElement .redLayer .st2 {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease 0.3s;
+  -moz-transition: opacity 0.5s ease 0.3s;
+  -ms-transition: opacity 0.5s ease 0.3s;
+  -o-transition: opacity 0.5s ease 0.3s;
+  transition: opacity 0.5s ease 0.3s;
+}
+
+#hotElement .redLayer .st0 {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease 0.2s;
+  -moz-transition: opacity 0.5s ease 0.2s;
+  -ms-transition: opacity 0.5s ease 0.2s;
+  -o-transition: opacity 0.5s ease 0.2s;
+  transition: opacity 0.5s ease 0.2s;
+}
+
+#hotElement .redLayer .st20 {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease 0.1s;
+  -moz-transition: opacity 0.5s ease 0.1s;
+  -ms-transition: opacity 0.5s ease 0.1s;
+  -o-transition: opacity 0.5s ease 0.1s;
+  transition: opacity 0.5s ease 0.1s;
+}
+
+#hotElement:hover .redLayer .st1 {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease 0.1s;
+  -moz-transition: opacity 0.5s ease 0.1s;
+  -ms-transition: opacity 0.5s ease 0.1s;
+  -o-transition: opacity 0.5s ease 0.1s;
+  transition: opacity 0.5s ease 0.1s;
+}
+
+#hotElement:hover .redLayer .st5 {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease 0.2s;
+  -moz-transition: opacity 0.5s ease 0.2s;
+  -ms-transition: opacity 0.5s ease 0.2s;
+  -o-transition: opacity 0.5s ease 0.2s;
+  transition: opacity 0.5s ease 0.2s;
+}
+
+#hotElement:hover .redLayer .st6 {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease 0.3s;
+  -moz-transition: opacity 0.5s ease 0.3s;
+  -ms-transition: opacity 0.5s ease 0.3s;
+  -o-transition: opacity 0.5s ease 0.3s;
+  transition: opacity 0.5s ease 0.3s;
+}
+
+#hotElement:hover .redLayer .st19 {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease 0.4s;
+  -moz-transition: opacity 0.5s ease 0.4s;
+  -ms-transition: opacity 0.5s ease 0.4s;
+  -o-transition: opacity 0.5s ease 0.4s;
+  transition: opacity 0.5s ease 0.4s;
+}
+
+#hotElement:hover .redLayer .st2 {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease 0.5s;
+  -moz-transition: opacity 0.5s ease 0.5s;
+  -ms-transition: opacity 0.5s ease 0.5s;
+  -o-transition: opacity 0.5s ease 0.5s;
+  transition: opacity 0.5s ease 0.5s;
+}
+
+#hotElement:hover .redLayer .st0 {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease 0.6s;
+  -moz-transition: opacity 0.5s ease 0.6s;
+  -ms-transition: opacity 0.5s ease 0.6s;
+  -o-transition: opacity 0.5s ease 0.6s;
+  transition: opacity 0.5s ease 0.6s;
+}
+
+#hotElement:hover .redLayer .st20 {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease 0.7s;
+  -moz-transition: opacity 0.5s ease 0.7s;
+  -ms-transition: opacity 0.5s ease 0.7s;
+  -o-transition: opacity 0.5s ease 0.7s;
+  transition: opacity 0.5s ease 0.7s;
+}
+
+#hotElement .blueLayer {
+  opacity: .3;
+  -webkit-transition: opacity 0.5s ease 0.4s;
+  -moz-transition: opacity 0.5s ease 0.4s;
+  -ms-transition: opacity 0.5s ease 0.4s;
+  -o-transition: opacity 0.5s ease 0.4s;
+  transition: opacity 0.5s ease 0.4s;
+}
+
+#hotElement .blueLayer .st16,
+#hotElement .blueLayer .st8,
+#hotElement .blueLayer .st3,
+#hotElement .blueLayer .st11 {
+  opacity: 1;
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -ms-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
+#hotElement:hover .blueLayer .st16,
+#hotElement:hover .blueLayer .st8,
+#hotElement:hover .blueLayer .st3,
+#hotElement:hover .blueLayer .st11 {
+  opacity: 0;
+  -webkit-transition: opacity 2s ease;
+  -moz-transition: opacity 2s ease;
+  -ms-transition: opacity 2s ease;
+  -o-transition: opacity 2s ease;
+  transition: opacity 2s ease;
+}
+
+/*SVG 2************************************************************************************************************/
+#circusWheels:hover .circle1,
+#circusWheels:hover .circle2,
+#circusWheels:hover .circle3,
+#circusWheels:hover .circle4,
+#circusWheels:hover .circle5,
+#circusWheels:hover .circle6 {
+  -webkit-transform: rotate(720deg) translate3d(0, 0, 0);
+  -moz-transform: rotate(720deg) translate3d(0, 0, 0);
+  -ms-transform: rotate(720deg) translate3d(0, 0, 0);
+  -o-transform: rotate(720deg) translate3d(0, 0, 0);
+  transform: rotate(720deg) translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 2s ease-out 1s;
+  -moz-transition: -moz-transform 2s ease-out 1s;
+  -o-transition: -o-transform 2s ease-out 1s;
+  transition: transform 2s ease-out 1s;
+}
+
+#circusWheels:hover .circle7 {
+  -webkit-transform: rotate(1440deg) translate3d(0, 0, 0) scale(1.55);
+  -moz-transform: rotate(1440deg) translate3d(0, 0, 0) scale(1.55);
+  -ms-transform: rotate(1440deg) translate3d(0, 0, 0) scale(1.55);
+  -o-transform: rotate(1440deg) translate3d(0, 0, 0) scale(1.55);
+  transform: rotate(1440deg) translate3d(0, 0, 0) scale(1.55);
+  -webkit-transition: opacity 1s ease 1s, -webkit-transform 3s ease;
+  -moz-transition: opacity 1s ease 1s, -moz-transform 3s ease;
+  -o-transition: opacity 1s ease 1s, -o-transform 3s ease;
+  transition: opacity 1s ease 1s, transform 3s ease;
+}
+
+/****************************************************/
+#circusWheels:hover .littleCircle1,
+#circusWheels:hover .littleCircle2,
+#circusWheels:hover .littleCircle3,
+#circusWheels:hover .littleCircle4,
+#circusWheels:hover .littleCircle5,
+#circusWheels:hover .littleCircle6 {
+  -webkit-transform: rotate(1440deg) translate3d(0, 0, 0);
+  -moz-transform: rotate(1440deg) translate3d(0, 0, 0);
+  -ms-transform: rotate(1440deg) translate3d(0, 0, 0);
+  -o-transform: rotate(1440deg) translate3d(0, 0, 0);
+  transform: rotate(1440deg) translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 2s ease-out 1s;
+  -moz-transition: -moz-transform 2s ease-out 1s;
+  -o-transition: -o-transform 2s ease-out 1s;
+  transition: transform 2s ease-out 1s;
+}
+
+/**************************************************/
+#circusWheels .circle1 {
+  -webkit-transition: -webkit-transform 2s ease-out;
+  -moz-transition: -moz-transform 2s ease-out;
+  -o-transition: -o-transform 2s ease-out;
+  transition: transform 2s ease-out;
+  -webkit-transform-origin: 115px 59px;
+  -moz-transform-origin: 115px 59px;
+  -ms-transform-origin: 115px 59px;
+  -o-transform-origin: 115px 59px;
+  transform-origin: 115px 59px;
+}
+
+#circusWheels .circle2 {
+  -webkit-transition: -webkit-transform 2s ease-out;
+  -moz-transition: -moz-transform 2s ease-out;
+  -o-transition: -o-transform 2s ease-out;
+  transition: transform 2s ease-out;
+  -webkit-transform-origin: 140px 102px;
+  -moz-transform-origin: 140px 102px;
+  -ms-transform-origin: 140px 102px;
+  -o-transform-origin: 140px 102px;
+  transform-origin: 140px 102px;
+}
+
+#circusWheels .circle3 {
+  -webkit-transition: -webkit-transform 2s ease-out;
+  -moz-transition: -moz-transform 2s ease-out;
+  -o-transition: -o-transform 2s ease-out;
+  transition: transform 2s ease-out;
+  -webkit-transform-origin: 65px 59px;
+  -moz-transform-origin: 65px 59px;
+  -ms-transform-origin: 65px 59px;
+  -o-transform-origin: 65px 59px;
+  transform-origin: 65px 59px;
+}
+
+#circusWheels .circle4 {
+  -webkit-transition: -webkit-transform 2s ease-out;
+  -moz-transition: -moz-transform 2s ease-out;
+  -o-transition: -o-transform 2s ease-out;
+  transition: transform 2s ease-out;
+  -webkit-transform-origin: 38px 102px;
+  -moz-transform-origin: 38px 102px;
+  -ms-transform-origin: 38px 102px;
+  -o-transform-origin: 38px 102px;
+  transform-origin: 38px 102px;
+}
+
+#circusWheels .circle5 {
+  -webkit-transition: -webkit-transform 2s ease-out;
+  -moz-transition: -moz-transform 2s ease-out;
+  -o-transition: -o-transform 2s ease-out;
+  transition: transform 2s ease-out;
+  -webkit-transform-origin: 64px 145px;
+  -moz-transform-origin: 64px 145px;
+  -ms-transform-origin: 64px 145px;
+  -o-transform-origin: 64px 145px;
+  transform-origin: 64px 145px;
+}
+
+#circusWheels .circle6 {
+  -webkit-transition: -webkit-transform 2s ease-out;
+  -moz-transition: -moz-transform 2s ease-out;
+  -o-transition: -o-transform 2s ease-out;
+  transition: transform 2s ease-out;
+  -webkit-transform-origin: 115px 145px;
+  -moz-transform-origin: 115px 145px;
+  -ms-transform-origin: 115px 145px;
+  -o-transform-origin: 115px 145px;
+  transform-origin: 115px 145px;
+}
+
+#circusWheels .circle7 {
+  opacity: 1;
+  -webkit-transition: -webkit-transform 2s ease-out, opacity 1s ease;
+  -moz-transition: -moz-transform 2s ease-out, opacity 1s ease;
+  -o-transition: -o-transform 2s ease-out, opacity 1s ease;
+  transition: transform 2s ease-out, opacity 1s ease;
+  -webkit-transform-origin: 89px 102px;
+  -moz-transform-origin: 89px 102px;
+  -ms-transform-origin: 89px 102px;
+  -o-transform-origin: 89px 102px;
+  transform-origin: 89px 102px;
+}
+
+/*******************************************/
+#circusWheels .littleCircle1 {
+  -webkit-transition: -webkit-transform 2s ease-out;
+  -moz-transition: -moz-transform 2s ease-out;
+  -o-transition: -o-transform 2s ease-out;
+  transition: transform 2s ease-out;
+  -webkit-transform-origin: 90px 29px;
+  -moz-transform-origin: 90px 29px;
+  -ms-transform-origin: 90px 29px;
+  -o-transform-origin: 90px 29px;
+  transform-origin: 90px 29px;
+}
+
+#circusWheels .littleCircle2 {
+  -webkit-transition: -webkit-transform 2s ease-out;
+  -moz-transition: -moz-transform 2s ease-out;
+  -o-transition: -o-transform 2s ease-out;
+  transition: transform 2s ease-out;
+  -webkit-transform-origin: 26px 65px;
+  -moz-transform-origin: 26px 65px;
+  -ms-transform-origin: 26px 65px;
+  -o-transform-origin: 26px 65px;
+  transform-origin: 26px 65px;
+}
+
+#circusWheels .littleCircle3 {
+  -webkit-transition: -webkit-transform 2s ease-out;
+  -moz-transition: -moz-transform 2s ease-out;
+  -o-transition: -o-transform 2s ease-out;
+  transition: transform 2s ease-out;
+  -webkit-transform-origin: 25px 138px;
+  -moz-transform-origin: 25px 138px;
+  -ms-transform-origin: 25px 138px;
+  -o-transform-origin: 25px 138px;
+  transform-origin: 25px 138px;
+}
+
+#circusWheels .littleCircle4 {
+  -webkit-transition: -webkit-transform 2s ease-out;
+  -moz-transition: -moz-transform 2s ease-out;
+  -o-transition: -o-transform 2s ease-out;
+  transition: transform 2s ease-out;
+  -webkit-transform-origin: 153px 139px;
+  -moz-transform-origin: 153px 139px;
+  -ms-transform-origin: 153px 139px;
+  -o-transform-origin: 153px 139px;
+  transform-origin: 153px 139px;
+}
+
+#circusWheels .littleCircle5 {
+  -webkit-transition: -webkit-transform 2s ease-out;
+  -moz-transition: -moz-transform 2s ease-out;
+  -o-transition: -o-transform 2s ease-out;
+  transition: transform 2s ease-out;
+  -webkit-transform-origin: 89px 175px;
+  -moz-transform-origin: 89px 175px;
+  -ms-transform-origin: 89px 175px;
+  -o-transform-origin: 89px 175px;
+  transform-origin: 89px 175px;
+}
+
+#circusWheels .littleCircle6 {
+  -webkit-transition: -webkit-transform 2s ease-out;
+  -moz-transition: -moz-transform 2s ease-out;
+  -o-transition: -o-transform 2s ease-out;
+  transition: transform 2s ease-out;
+  -webkit-transform-origin: 153px 66px;
+  -moz-transform-origin: 153px 66px;
+  -ms-transform-origin: 153px 66px;
+  -o-transform-origin: 153px 66px;
+  transform-origin: 153px 66px;
+}
+
+/****************************************/
+#circusWheels:hover .st1 {
+  fill: orange;
+  opacity: 1;
+}
+
+#circusWheels:hover .st0,
+#circusWheels:hover .st2 {
+  -webkit-transition: fill 2s ease, opacity 0.5s ease 2s;
+  -moz-transition: fill 2s ease, opacity 0.5s ease 2s;
+  -o-transition: fill 2s ease, opacity 0.5s ease 2s;
+  transition: fill 2s ease, opacity 0.5s ease 2s;
+}
+
+#circusWheels:hover .st3 {
+  fill: yellow;
+}
+
+#circusWheels:hover .st4 {
+  fill: lightgreen;
+}
+
+#circusWheels:hover .st5 {
+  fill: #ff3366;
+}
+
+#circusWheels:hover .st6 {
+  fill: #66bbff;
+}
+
+#circusWheels:hover .st7 {
+  fill: silver;
+}
+
+#circusWheels:hover .st8 {
+  fill: #ff6677;
+  opacity: 1;
+}
+
+#circusWheels:hover .st9,
+#circusWheels:hover .st10,
+#circusWheels:hover .st11,
+#circusWheels:hover .st12,
+#circusWheels:hover .st13 {
+  fill: white;
+  opacity: 1;
+}
+
+#circusWheels:hover .st14 {
+  fill: mediumturquoise;
+  opacity: 1;
+}
+
+/*Transitions 2********************************************/
+#circusWheels .st0 {
+  -webkit-transition: fill 2s ease, opacity 5s ease;
+  -moz-transition: fill 2s ease, opacity 5s ease;
+  -o-transition: fill 2s ease, opacity 5s ease;
+  transition: fill 2s ease, opacity 5s ease;
+  opacity: 1;
+  fill: lightyellow;
+}
+
+#circusWheels .st1 {
+  -webkit-transition: fill 3s ease, opacity 5s ease;
+  -moz-transition: fill 3s ease, opacity 5s ease;
+  -o-transition: fill 3s ease, opacity 5s ease;
+  transition: fill 3s ease, opacity 5s ease;
+  fill: darkred;
+}
+
+#circusWheels .st2 {
+  -webkit-transition: fill 3s ease, opacity 5s ease;
+  -moz-transition: fill 3s ease, opacity 5s ease;
+  -o-transition: fill 3s ease, opacity 5s ease;
+  transition: fill 3s ease, opacity 5s ease;
+  fill: #ff4444;
+  opacity: .8;
+}
+
+#circusWheels .st3 {
+  -webkit-transition: fill 4s ease, opacity 5s ease 2s;
+  -moz-transition: fill 4s ease, opacity 5s ease 2s;
+  -o-transition: fill 4s ease, opacity 5s ease 2s;
+  transition: fill 4s ease, opacity 5s ease 2s;
+  fill: #9988aa;
+}
+
+#circusWheels .st4 {
+  -webkit-transition: fill 2s ease, opacity 5s ease 2s;
+  -moz-transition: fill 2s ease, opacity 5s ease 2s;
+  -o-transition: fill 2s ease, opacity 5s ease 2s;
+  transition: fill 2s ease, opacity 5s ease 2s;
+}
+
+#circusWheels .st5 {
+  -webkit-transition: fill 2s ease, opacity 5s ease 2s;
+  -moz-transition: fill 2s ease, opacity 5s ease 2s;
+  -o-transition: fill 2s ease, opacity 5s ease 2s;
+  transition: fill 2s ease, opacity 5s ease 2s;
+}
+
+#circusWheels .st6 {
+  -webkit-transition: fill 2s ease, opacity 5s ease 2s;
+  -moz-transition: fill 2s ease, opacity 5s ease 2s;
+  -o-transition: fill 2s ease, opacity 5s ease 2s;
+  transition: fill 2s ease, opacity 5s ease 2s;
+}
+
+#circusWheels .st7 {
+  -webkit-transition: fill 4s ease, opacity 5s ease 2s;
+  -moz-transition: fill 4s ease, opacity 5s ease 2s;
+  -o-transition: fill 4s ease, opacity 5s ease 2s;
+  transition: fill 4s ease, opacity 5s ease 2s;
+}
+
+#circusWheels .st13 {
+  fill: #ff3355;
+}
+
+#circusWheels .st14 {
+  fill: pink;
+}
+
+/*SVG 3**************************************************************************************************************/
+#macrame polygon {
+  stroke: #333;
+}
+
+#macrame:hover .hexagon3 {
+  -webkit-transform: rotate(30deg) translate3d(0, 0, 0);
+  -moz-transform: rotate(30deg) translate3d(0, 0, 0);
+  -ms-transform: rotate(30deg) translate3d(0, 0, 0);
+  -o-transform: rotate(30deg) translate3d(0, 0, 0);
+  transform: rotate(30deg) translate3d(0, 0, 0);
+}
+
+#macrame .hexagon3 {
+  -webkit-transition: -webkit-transform 1s ease;
+  -moz-transition: -moz-transform 1s ease;
+  -o-transition: -o-transform 1s ease;
+  transition: transform 1s ease;
+  -webkit-transform-origin: 84px 105px;
+  -moz-transform-origin: 84px 105px;
+  -ms-transform-origin: 84px 105px;
+  -o-transform-origin: 84px 105px;
+  transform-origin: 84px 105px;
+}
+
+#macrame:hover .st0 {
+  fill: #9e5f52;
+  opacity: .8;
+}
+
+#macrame:hover .st1 {
+  fill: white;
+  -webkit-transition: fill 3s ease, opacity 5s ease, -webkit-transform 2s ease;
+  -moz-transition: fill 3s ease, opacity 5s ease, -moz-transform 2s ease;
+  -o-transition: fill 3s ease, opacity 5s ease, -o-transform 2s ease;
+  transition: fill 3s ease, opacity 5s ease, transform 2s ease;
+}
+
+#macrame:hover .st2 {
+  opacity: .8;
+}
+
+#macrame:hover .st4 {
+  fill: white;
+}
+
+#macrame:hover .st5 {
+  fill: black;
+}
+
+#macrame:hover .st6 {
+  fill: white;
+}
+
+#macrame:hover .st7 {
+  opacity: .7;
+}
+
+#macrame:hover .st8 {
+  opacity: .8;
+}
+
+#macrame:hover .st9 {
+  fill: white;
+}
+
+#macrame:hover .st10 {
+  fill: black;
+}
+
+#macrame:hover .st11 {
+  fill: white;
+}
+
+#macrame:hover .st12 {
+  fill: black;
+  opacity: .8;
+}
+
+#macrame:hover .st13 {
+  opacity: .8;
+}
+
+#macrame:hover .st14 {
+  opacity: .8;
+}
+
+/*Transitions 3****************************************************/
+#macrame .st0 {
+  -webkit-transition: fill 2s ease, opacity 5s ease;
+  -moz-transition: fill 2s ease, opacity 5s ease;
+  -o-transition: fill 2s ease, opacity 5s ease;
+  transition: fill 2s ease, opacity 5s ease;
+  opacity: 0;
+}
+
+#macrame .st1 {
+  -webkit-transition: fill 3s ease, opacity 5s ease;
+  -moz-transition: fill 3s ease, opacity 5s ease;
+  -o-transition: fill 3s ease, opacity 5s ease;
+  transition: fill 3s ease, opacity 5s ease;
+  opacity: 1;
+}
+
+#macrame .st2 {
+  -webkit-transition: fill 3s ease, opacity 5s ease;
+  -moz-transition: fill 3s ease, opacity 5s ease;
+  -o-transition: fill 3s ease, opacity 5s ease;
+  transition: fill 3s ease, opacity 5s ease;
+  opacity: 0;
+}
+
+#macrame .st3 {
+  -webkit-transition: fill 6s ease, opacity 5s ease;
+  -moz-transition: fill 6s ease, opacity 5s ease;
+  -o-transition: fill 6s ease, opacity 5s ease;
+  transition: fill 6s ease, opacity 5s ease;
+}
+
+#macrame .st4 {
+  -webkit-transition: -webkit-transform 2s ease, fill 2s ease;
+  -moz-transition: -moz-transform 2s ease, fill 2s ease;
+  -o-transition: -o-transform 2s ease, fill 2s ease;
+  transition: transform 2s ease, fill 2s ease;
+}
+
+#macrame .st5 {
+  -webkit-transition: -webkit-transform 2s ease, fill 2s ease;
+  -moz-transition: -moz-transform 2s ease, fill 2s ease;
+  -o-transition: -o-transform 2s ease, fill 2s ease;
+  transition: transform 2s ease, fill 2s ease;
+}
+
+#macrame .st6 {
+  -webkit-transition: -webkit-transform 2s ease, fill 2s ease;
+  -moz-transition: -moz-transform 2s ease, fill 2s ease;
+  -o-transition: -o-transform 2s ease, fill 2s ease;
+  transition: transform 2s ease, fill 2s ease;
+}
+
+#macrame .st7 {
+  -webkit-transition: fill 3s ease, opacity 5s ease;
+  -moz-transition: fill 3s ease, opacity 5s ease;
+  -o-transition: fill 3s ease, opacity 5s ease;
+  transition: fill 3s ease, opacity 5s ease;
+}
+
+#macrame .st8 {
+  -webkit-transition: fill 3s ease, opacity 5s ease;
+  -moz-transition: fill 3s ease, opacity 5s ease;
+  -o-transition: fill 3s ease, opacity 5s ease;
+  transition: fill 3s ease, opacity 5s ease;
+}
+
+#macrame .st9 {
+  -webkit-transition: fill 3s ease, opacity 5s ease;
+  -moz-transition: fill 3s ease, opacity 5s ease;
+  -o-transition: fill 3s ease, opacity 5s ease;
+  transition: fill 3s ease, opacity 5s ease;
+  opacity: 1;
+}
+
+#macrame .st10 {
+  -webkit-transition: fill 5s ease, opacity 5s ease;
+  -moz-transition: fill 5s ease, opacity 5s ease;
+  -o-transition: fill 5s ease, opacity 5s ease;
+  transition: fill 5s ease, opacity 5s ease;
+}
+
+#macrame .st11 {
+  -webkit-transition: fill 6s ease, opacity 5s ease;
+  -moz-transition: fill 6s ease, opacity 5s ease;
+  -o-transition: fill 6s ease, opacity 5s ease;
+  transition: fill 6s ease, opacity 5s ease;
+}
+
+#macrame .st12 {
+  -webkit-transition: fill 6s ease, opacity 5s ease;
+  -moz-transition: fill 6s ease, opacity 5s ease;
+  -o-transition: fill 6s ease, opacity 5s ease;
+  transition: fill 6s ease, opacity 5s ease;
+}
+
+#macrame .st13 {
+  -webkit-transition: fill 6s ease, opacity 5s ease;
+  -moz-transition: fill 6s ease, opacity 5s ease;
+  -o-transition: fill 6s ease, opacity 5s ease;
+  transition: fill 6s ease, opacity 5s ease;
+}
+
+#macrame .st14 {
+  -webkit-transition: fill 6s ease, opacity 5s ease;
+  -moz-transition: fill 6s ease, opacity 5s ease;
+  -o-transition: fill 6s ease, opacity 5s ease;
+  transition: fill 6s ease, opacity 5s ease;
+}
+
+#macrame g {
+  -webkit-transition: -webkit-transform 2s ease-out;
+  -moz-transition: -moz-transform 2s ease-out;
+  -o-transition: -o-transform 2s ease-out;
+  transition: transform 2s ease-out;
+}
+
+#macrame .circle1 {
+  -webkit-transform-origin: 115px 58px;
+  -moz-transform-origin: 115px 58px;
+  -ms-transform-origin: 115px 58px;
+  -o-transform-origin: 115px 58px;
+  transform-origin: 115px 58px;
+}
+
+#macrame .circle2 {
+  -webkit-transform-origin: 140px 102px;
+  -moz-transform-origin: 140px 102px;
+  -ms-transform-origin: 140px 102px;
+  -o-transform-origin: 140px 102px;
+  transform-origin: 140px 102px;
+}
+
+#macrame .circle3 {
+  -webkit-transform-origin: 65px 58px;
+  -moz-transform-origin: 65px 58px;
+  -ms-transform-origin: 65px 58px;
+  -o-transform-origin: 65px 58px;
+  transform-origin: 65px 58px;
+}
+
+#macrame .circle4 {
+  -webkit-transform-origin: 40px 101px;
+  -moz-transform-origin: 40px 101px;
+  -ms-transform-origin: 40px 101px;
+  -o-transform-origin: 40px 101px;
+  transform-origin: 40px 101px;
+}
+
+#macrame .circle5 {
+  -webkit-transform-origin: 65px 145px;
+  -moz-transform-origin: 65px 145px;
+  -ms-transform-origin: 65px 145px;
+  -o-transform-origin: 65px 145px;
+  transform-origin: 65px 145px;
+}
+
+#macrame .circle6 {
+  -webkit-transform-origin: 115px 145px;
+  -moz-transform-origin: 115px 145px;
+  -ms-transform-origin: 115px 145px;
+  -o-transform-origin: 115px 145px;
+  transform-origin: 115px 145px;
+}
+
+#macrame:hover g.circle1,
+#macrame:hover g.circle2,
+#macrame:hover g.circle3,
+#macrame:hover g.circle4,
+#macrame:hover g.circle5,
+#macrame:hover g.circle6 {
+  -webkit-transform: rotate(360deg) translate3d(0, 0, 0);
+  -moz-transform: rotate(360deg) translate3d(0, 0, 0);
+  -ms-transform: rotate(360deg) translate3d(0, 0, 0);
+  -o-transform: rotate(360deg) translate3d(0, 0, 0);
+  transform: rotate(360deg) translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 1.5s ease-out;
+  -moz-transition: -moz-transform 1.5s ease-out;
+  -o-transition: -o-transform 1.5s ease-out;
+  transition: transform 1.5s ease-out;
+}
+
+/*SVG 4**************************************************************************************************************/
+#threeHearts g {
+  opacity: .9;
+  -webkit-transition: opacity 1s ease, -webkit-transform 3s ease;
+  -moz-transition: opacity 1s ease, -moz-transform 3s ease;
+  -o-transition: opacity 1s ease, -o-transform 3s ease;
+  transition: opacity 1s ease, transform 3s ease;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+#threeHearts:active,
+#threeHearts:hover g:not(.noTransform) {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+#threeHearts g.topHeart {
+  opacity: 0.7;
+  -webkit-transform-origin: 94.6px 108.23px;
+  -moz-transform-origin: 94.6px 108.23px;
+  -ms-transform-origin: 94.6px 108.23px;
+  -o-transform-origin: 94.6px 108.23px;
+  transform-origin: 94.6px 108.23px;
+}
+
+/*SVG 5*****************************************************************************************************************/
+#moth #bigDisk {
+  -webkit-transition: -webkit-transform 2s ease-out, opacity 2s ease;
+  -moz-transition: -moz-transform 2s ease-out, opacity 2s ease;
+  -o-transition: -o-transform 2s ease-out, opacity 2s ease;
+  transition: transform 2s ease-out, opacity 2s ease;
+  -webkit-transform-origin: 88px 102px;
+  -moz-transform-origin: 88px 102px;
+  -ms-transform-origin: 88px 102px;
+  -o-transform-origin: 88px 102px;
+  transform-origin: 88px 102px;
+  opacity: .2;
+}
+
+#moth:hover #bigDisk {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+/*********************************************************/
+#moth #smallDisk {
+  -webkit-transition: -webkit-transform 2s ease, opacity 2s ease;
+  -moz-transition: -moz-transform 2s ease, opacity 2s ease;
+  -o-transition: -o-transform 2s ease, opacity 2s ease;
+  transition: transform 2s ease, opacity 2s ease;
+  -webkit-transform-origin: 90px;
+  -moz-transform-origin: 90px;
+  -ms-transform-origin: 90px;
+  -o-transform-origin: 90px;
+  transform-origin: 90px;
+  opacity: .3;
+}
+
+#moth:hover #smallDisk {
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}
+
+/**********************************************************/
+#moth #yShape {
+  -webkit-transition: -webkit-transform 2.5s ease, opacity 2s ease;
+  -moz-transition: -moz-transform 2.5s ease, opacity 2s ease;
+  -o-transition: -o-transform 2.5s ease, opacity 2s ease;
+  transition: transform 2.5s ease, opacity 2s ease;
+  -webkit-transform-origin: 89px 102px;
+  -moz-transform-origin: 89px 102px;
+  -ms-transform-origin: 89px 102px;
+  -o-transform-origin: 89px 102px;
+  transform-origin: 89px 102px;
+  opacity: .4;
+}
+
+#moth:hover #yShape {
+  -webkit-transform: rotate(1080deg);
+  -moz-transform: rotate(1080deg);
+  -ms-transform: rotate(1080deg);
+  -o-transform: rotate(1080deg);
+  transform: rotate(1080deg);
+}
+
+/*SVG 6******************************************************************************************************************/
+#flowerCube:hover .st0 {
+  fill: #ffffcc;
+  -webkit-transform: rotate3d(1, 1, 0, 360deg);
+  -moz-transform: rotate3d(1, 1, 0, 360deg);
+  -ms-transform: rotate3d(1, 1, 0, 360deg);
+  -o-transform: rotate3d(1, 1, 0, 360deg);
+  transform: rotate3d(1, 1, 0, 360deg);
+  opacity: 1;
+}
+
+#flowerCube:hover .st1 {
+  opacity: 0;
+}
+
+#flowerCube:hover .st2 {
+  fill: #EBF476;
+  opacity: 1;
+  -webkit-transform: rotate3d(4, 4, 4, 360deg);
+  -moz-transform: rotate3d(4, 4, 4, 360deg);
+  -ms-transform: rotate3d(4, 4, 4, 360deg);
+  -o-transform: rotate3d(4, 4, 4, 360deg);
+  transform: rotate3d(4, 4, 4, 360deg);
+}
+
+#flowerCube:hover .st3 {
+  fill: #8EB936;
+  -webkit-transform: rotate3d(3, 2, 1, 360deg);
+  -moz-transform: rotate3d(3, 2, 1, 360deg);
+  -ms-transform: rotate3d(3, 2, 1, 360deg);
+  -o-transform: rotate3d(3, 2, 1, 360deg);
+  transform: rotate3d(3, 2, 1, 360deg);
+}
+
+#flowerCube:hover .st4 {
+  fill: #ffffcc;
+  opacity: 1;
+  -webkit-transform: rotate3d(1, 1, 0, 360deg);
+  -moz-transform: rotate3d(1, 1, 0, 360deg);
+  -ms-transform: rotate3d(1, 1, 0, 360deg);
+  -o-transform: rotate3d(1, 1, 0, 360deg);
+  transform: rotate3d(1, 1, 0, 360deg);
+}
+
+#flowerCube:hover .st5 {
+  fill: #ffffcc;
+  opacity: 1;
+  -webkit-transform: rotate3d(1, 1, 0, 360deg);
+  -moz-transform: rotate3d(1, 1, 0, 360deg);
+  -ms-transform: rotate3d(1, 1, 0, 360deg);
+  -o-transform: rotate3d(1, 1, 0, 360deg);
+  transform: rotate3d(1, 1, 0, 360deg);
+}
+
+#flowerCube:hover .st6 {
+  fill: #ffffcc;
+  opacity: 1;
+  -webkit-transform: rotate3d(1, 1, 0, 360deg);
+  -moz-transform: rotate3d(1, 1, 0, 360deg);
+  -ms-transform: rotate3d(1, 1, 0, 360deg);
+  -o-transform: rotate3d(1, 1, 0, 360deg);
+  transform: rotate3d(1, 1, 0, 360deg);
+}
+
+#flowerCube:hover .st7 {
+  fill: #659357;
+  -webkit-transform: rotate3d(1, 1, 0, 360deg);
+  -moz-transform: rotate3d(1, 1, 0, 360deg);
+  -ms-transform: rotate3d(1, 1, 0, 360deg);
+  -o-transform: rotate3d(1, 1, 0, 360deg);
+  transform: rotate3d(1, 1, 0, 360deg);
+}
+
+#flowerCube:hover .st8 {
+  fill: #086D18;
+  -webkit-transform: rotate3d(1, 1, 0, 360deg);
+  -moz-transform: rotate3d(1, 1, 0, 360deg);
+  -ms-transform: rotate3d(1, 1, 0, 360deg);
+  -o-transform: rotate3d(1, 1, 0, 360deg);
+  transform: rotate3d(1, 1, 0, 360deg);
+}
+
+#flowerCube:hover .st9 {
+  opacity: 0;
+}
+
+#flowerCube:hover .st10 {
+  fill: #ffffcc;
+  opacity: 1;
+  -webkit-transform: rotate3d(1, 1, 0, 360deg);
+  -moz-transform: rotate3d(1, 1, 0, 360deg);
+  -ms-transform: rotate3d(1, 1, 0, 360deg);
+  -o-transform: rotate3d(1, 1, 0, 360deg);
+  transform: rotate3d(1, 1, 0, 360deg);
+}
+
+#flowerCube:hover .st11 {
+  fill: #ffffcc;
+  -webkit-transform: rotate3d(1, 1, 0, 360deg);
+  -moz-transform: rotate3d(1, 1, 0, 360deg);
+  -ms-transform: rotate3d(1, 1, 0, 360deg);
+  -o-transform: rotate3d(1, 1, 0, 360deg);
+  transform: rotate3d(1, 1, 0, 360deg);
+  opacity: 1;
+}
+
+#flowerCube:hover .st12 {
+  fill: #ffffcc;
+  opacity: 1;
+  -webkit-transform: rotate3d(1, 1, 0, 360deg);
+  -moz-transform: rotate3d(1, 1, 0, 360deg);
+  -ms-transform: rotate3d(1, 1, 0, 360deg);
+  -o-transform: rotate3d(1, 1, 0, 360deg);
+  transform: rotate3d(1, 1, 0, 360deg);
+}
+
+#flowerCube:hover .st13 {
+  fill: #CEEA88;
+  -webkit-transform: rotate3d(1, 1, 0, 360deg);
+  -moz-transform: rotate3d(1, 1, 0, 360deg);
+  -ms-transform: rotate3d(1, 1, 0, 360deg);
+  -o-transform: rotate3d(1, 1, 0, 360deg);
+  transform: rotate3d(1, 1, 0, 360deg);
+}
+
+#flowerCube:hover .st14 {
+  fill: #99cc44;
+  -webkit-transform: rotate3d(3, 2, 1, 360deg);
+  -moz-transform: rotate3d(3, 2, 1, 360deg);
+  -ms-transform: rotate3d(3, 2, 1, 360deg);
+  -o-transform: rotate3d(3, 2, 1, 360deg);
+  transform: rotate3d(3, 2, 1, 360deg);
+}
+
+/*Transitions 6*****************************************/
+#flowerCube .st0 {
+  -webkit-transition: fill 2s ease, opacity 5s ease, -webkit-transform 2s ease;
+  -moz-transition: fill 2s ease, opacity 5s ease, -moz-transform 2s ease;
+  -o-transition: fill 2s ease, opacity 5s ease, -o-transform 2s ease;
+  transition: fill 2s ease, opacity 5s ease, transform 2s ease;
+  fill: rgba(255, 255, 255, 0);
+}
+
+#flowerCube .st1 {
+  -webkit-transition: fill 3s ease, opacity 3s ease, -webkit-transform 2s ease;
+  -moz-transition: fill 3s ease, opacity 3s ease, -moz-transform 2s ease;
+  -o-transition: fill 3s ease, opacity 3s ease, -o-transform 2s ease;
+  transition: fill 3s ease, opacity 3s ease, transform 2s ease;
+  fill: #25351a;
+  opacity: 1;
+}
+
+#flowerCube .st2 {
+  fill: #ffffcc;
+  opacity: 0;
+  -webkit-transition: fill 3s ease, opacity 3s ease, -webkit-transform 2s ease;
+  -moz-transition: fill 3s ease, opacity 3s ease, -moz-transform 2s ease;
+  -o-transition: fill 3s ease, opacity 3s ease, -o-transform 2s ease;
+  transition: fill 3s ease, opacity 3s ease, transform 2s ease;
+}
+
+#flowerCube .st3 {
+  -webkit-transition: -webkit-transform 2s ease, fill 4s ease;
+  -moz-transition: -moz-transform 2s ease, fill 4s ease;
+  -o-transition: -o-transform 2s ease, fill 4s ease;
+  transition: transform 2s ease, fill 4s ease;
+}
+
+#flowerCube .st7 {
+  -webkit-transition: -webkit-transform 2s ease, fill 4s ease;
+  -moz-transition: -moz-transform 2s ease, fill 4s ease;
+  -o-transition: -o-transform 2s ease, fill 4s ease;
+  transition: transform 2s ease, fill 4s ease;
+}
+
+#flowerCube .st8 {
+  -webkit-transition: -webkit-transform 2s ease, fill 6s ease;
+  -moz-transition: -moz-transform 2s ease, fill 6s ease;
+  -o-transition: -o-transform 2s ease, fill 6s ease;
+  transition: transform 2s ease, fill 6s ease;
+}
+
+#flowerCube .st9 {
+  fill: #25351a;
+  opacity: 1;
+  -webkit-transition: fill 3s ease, opacity 3s ease, -webkit-transform 2s ease;
+  -moz-transition: fill 3s ease, opacity 3s ease, -moz-transform 2s ease;
+  -o-transition: fill 3s ease, opacity 3s ease, -o-transform 2s ease;
+  transition: fill 3s ease, opacity 3s ease, transform 2s ease;
+}
+
+#flowerCube .st4,
+#flowerCube .st5,
+#flowerCube .st6,
+#flowerCube .st10,
+#flowerCube .st11,
+#flowerCube .st12 {
+  fill: rgba(255, 255, 255, 0);
+  -webkit-transition: fill 2s ease, opacity 2s ease, -webkit-transform 2s ease;
+  -moz-transition: fill 2s ease, opacity 2s ease, -moz-transform 2s ease;
+  -o-transition: fill 2s ease, opacity 2s ease, -o-transform 2s ease;
+  transition: fill 2s ease, opacity 2s ease, transform 2s ease;
+}
+
+#flowerCube .st13,
+#flowerCube .st14 {
+  -webkit-transition: -webkit-transform 2s ease, opacity 2s ease, fill 2s ease;
+  -moz-transition: -moz-transform 2s ease, opacity 2s ease, fill 2s ease;
+  -o-transition: -o-transform 2s ease, opacity 2s ease, fill 2s ease;
+  transition: transform 2s ease, opacity 2s ease, fill 2s ease;
+}
+
+/*Media Queries*************************************************************************************************************/
+@media screen and (max-width: 900px) {
+  .wrapper {
+    border-radius: 0;
+    margin: 150px 0px 0px 0px;
+    padding: 70px 35px;
+  }
+  .artBox {
+    width: calc(50% - 10px);
+    border-radius: 10px;
+    margin: 5px 5px 40px;
+  }
+  h1 {
+    font-size: 2.6rem;
+    margin-top: 40px;
+  }
+  header {
+    padding: 35px 40px;
+    height: 150px;
+  }
+  header img {
+    left: -175px;
+    top: -77px;
+  }
+  h2.firstTitle {
+    font-size: 1.7rem;
+  }
+  .fixedMenu {
+    top: 165px;
+  }
+  .fixedMenu:hover {
+    width: 450px;
+  }
+  .fixedMenu:hover .topNav > li:first-child {
+    margin-left: 40px;
+  }
+  .menu > ul > li > a {
+    padding: 26px 4px;
+    font-size: .8rem;
+  }
+  .dots img {
+    width: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .artBox {
+    width: calc(100% - 10px);
+    border-radius: 5px;
+    margin: 5px 5px 40px;
+    padding: 40px;
+  }
+  header {
+    padding-top: 30px;
+  }
+  header img {
+    display: none;
+  }
+  h1 {
+    text-align: center;
+    max-width: 100%;
+    margin-top: 15px;
+    font-size: 2.2rem;
+    float: none;
+    line-height: 3rem;
+  }
+  h2.firstTitle {
+    margin-top: 40px;
+  }
+  .fixedMenu {
+    top: 150px;
+  }
+  .fixedMenu:hover {
+    width: 100%;
+  }
+  .fixedMenu:hover .menu {
+    width: 100%;
+    left: 0px;
+    border-radius: 0;
+  }
+  .fixedMenu:hover .topNav > li:first-child {
+    margin-left: 20px;
+  }
+  .menu {
+    border-top-left-radius: 0;
+  }
+  .topNav > li > a {
+    padding: 26px 5px;
+    font-size: .75rem;
+  }
+  .topNav > li:first-child {
+    -webkit-transition: 0.8s ease;
+    -moz-transition: 0.8s ease;
+    -o-transition: 0.8s ease;
+    transition: 0.8s ease;
+  }
+  .dots {
+    min-width: 33%;
+  }
+  .dots img {
+    width: 20px;
+  }
+}
+
+@media screen and (min-width: 1480px) {
+  body .wrapper {
+    width: 1280px;
+    margin: 220px auto 80px auto;
+  }
+}

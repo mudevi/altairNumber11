@@ -1,0 +1,1079 @@
+@import "_normalize";
+@import "_placeholders_mixins";
+
+/*Main Styles*********************************************************************************************************/
+
+body {
+	background-color: #000;
+	font-family: "Source Sans Pro", Futura, Arial, sans-serif;
+}
+header {
+	height: 175px;
+	background-color: #333;
+	padding: 35px 95px 35px 60px;
+	min-width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 8;
+	overflow: hidden;
+	opacity: .97;
+		img {
+			width: 800px;
+			height: 800px;
+			position: absolute;
+			top: -80px;
+			left: 8px;
+			background-color: transparent;
+			z-index: -1;
+			opacity: 1;
+		}
+}
+.wrapper {
+	margin: 220px 95px 80px 60px;
+	background-color: beige;
+	border-radius: 5px;
+	padding: 40px 20px;
+	max-width: 1280px;
+	position: relative;
+}
+.artFlex {
+	width: 100%;
+	max-width: 1260px;
+	@extend %flexbox;
+	@include vendorize(justify-content, space-between);
+	@include vendorize(flex-direction, row);
+	@include vendorize(flex-wrap, wrap);
+}
+.artBox {
+	width: calc(33.3333% - 20px);
+	@include vendorize(flex, 1);
+	@include vendorize(flex-basis, auto);
+	background-color: black;
+	border-radius: 10px;
+	margin: 10px 10px 40px;
+	padding: 35px;
+		p {
+			background-color: #222;
+			border-radius: 5px;
+			padding: 20px;
+		}
+		p {
+		color: beige;
+		text-align: center;
+		}
+}
+svg {
+	font-size: 0;
+	width: 105%;
+	height: 100%;
+	margin-bottom: 20px;
+	position: relative;
+	left: -6px;
+}
+svg:hover,
+svg:active {
+	g, polygon {
+	@extend %hardwareAcc;
+	}
+}
+.hover {
+	@include vendorize(user-select, none);
+	@include vendorize(touch-callout, none);        
+}
+.dots {
+	width: 25%;
+	max-width: 200px;
+	margin: 0 auto;
+	padding-top: 80px;
+	clear: left;
+	@extend %flexbox;
+	@include vendorize(justify-content, space-between);
+		img {
+			width: 30px;
+			@include vendorize(flex-direction, row);
+			@include transition(2s ease);
+			&:nth-child(2) {
+				@include vendorize(transform, rotate(180deg));
+				@include transition(2s ease);
+			}
+			&:hover {
+				@include vendorize(transform, rotate(720deg));
+			}
+		}
+}
+#top {
+	position: absolute;
+  	top: -150px;
+}
+.about {
+	text-align: center;
+	float: left;
+	margin: 0px auto 30px;
+	border-radius: 5px;
+	padding: 0 30px;
+		p {
+			margin: 20px 30px;
+			font-size: 16px;
+		}
+}
+footer {
+	font-size: 26px;
+	height: 150px;
+	background-color: #333;
+	text-align: center;
+	overflow: hidden;
+		a i {
+			font-size: 30px;
+			color: #666;
+		}
+		p {
+			width: 125px;
+			margin: auto;
+			clear: both;
+			color: #666;
+			font-size: 12px;
+		}
+}
+.twitterIcon {
+	width: 30px;
+	height: 30px;
+	margin: 70px auto 5px;
+}
+
+/*Fixed Menu*****************************************************************************************************************/
+
+.fixedMenu {
+	position: fixed;
+	width: 75px;
+	right: 0;
+	top: 220px;
+	z-index: 10;
+	@include transition(1s ease);
+	// @extend %hardwareAcc;
+		&:hover {
+			width: 550px;
+			@include transition(1s ease .4s);
+			.menu {
+				// @extend %hardwareAcc;
+				@include transition(1s ease .4s);
+				right: 0px;
+				box-shadow: -2px 2px 3px #888888;
+			}
+			.menuContainer {
+				overflow: visible;
+				// @extend %hardwareAcc;
+			}
+			img {
+				@include transition(transform .3s ease);
+			}
+		}
+}
+.menuContainer {
+	position: relative;
+	overflow: hidden;
+    height: 78px;
+    // @extend %hardwareAcc;
+}
+.menu {
+	background-color: beige;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	width: 550px;
+	height: 75px;
+	position: absolute;
+	left: 4px;
+	right: -482px;
+	@include transition(1s ease);
+	// @extend %hardwareAcc;
+	box-shadow: -2px 2px 3px #888888;
+		ul {
+			list-style-type: none;
+		}
+		li {
+			position: relative;
+			display: inline;
+				&:hover ul {
+					opacity: 1;
+					box-shadow: -2px 2px 3px #888888;
+					z-index: -1;
+				}
+		}
+		a {
+			text-decoration: none;
+			color: #333;
+			font-family: "Exo", sans-serif;
+			font-weight: 700;
+			@include transition(.5s ease);
+				&:hover {
+					color: #CE4646;
+				}
+		}
+}
+.menuIcon {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0;
+	padding-top: 18px;
+	padding-left: 16px;
+	@include transition(.3s ease .4s);
+		img {
+			width: 40px;
+			height: 40px;
+		}
+		&:hover img {
+			@include vendorize(transform, rotate(360deg));
+		}
+}
+
+/*Dropdown Menu**********************************/
+
+.topNav {
+	margin-top: 27px;
+		& > li > a {
+			padding: 27px 7px;
+		}
+		&> li:first-child {
+			margin-left: 40px;
+		}
+		li:nth-child(2):hover {
+			.dropdown {
+				z-index: +1;
+			}
+		}
+}
+.dropdown {
+	opacity: 0;
+	position: absolute;
+	left: -5px;
+	top: 48px;
+	width: 182px;
+	background-color: beige;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	padding-left: 0;
+	@include transition(opacity .7s ease);
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	box-shadow: -2px 2px 3px #888888;
+		li:first-child a {
+		
+		}
+		li {
+			display: list-item;
+			height: 2rem;
+			position: relative;
+		}
+		a {
+			position: relative;
+			padding: 5px 30px;
+			display: inline-block;
+		}
+}
+a.fixedHeaderAnchor {
+	position: relative;
+	float: left;
+	visibility: hidden;
+	display: inline;
+	height: 2px;
+	width: 2px;
+	top: -150px;
+}
+
+/*Type*********************************************************************************************************************/
+
+h1,h2 {
+	font-family: "Exo", Arial, sans-serif;
+}
+h1 {
+	float: right;
+	color: beige;
+	font-size: 3rem;
+	margin-top: 50px;
+	z-index: 10;
+}
+h2 {
+	color: #000;
+	margin-top: 40px;
+	font-weight: 700;
+	margin-bottom: 40px;
+	font-size: 2rem;
+		&.firstTitle {
+			margin-left: 10px;
+			margin-top: 60px;
+			margin-bottom: 30px;
+		}
+		&:not(.firstTitle) {
+			margin-top: 10px;
+		}
+}
+span.bookTitle {
+	text-decoration: underline;
+}
+
+/*SVG Colors**************************************************************************************************************/
+
+.colors1 .st0{fill:#477182;}
+.colors1 .st1{fill:#7C7D80;}
+.colors1 .st2{fill:#ACADB0;}
+.colors1 .st3{fill:#809EAD;}
+.colors1 .st4{fill:#887EA7;}
+.colors1 .st5{fill:#5F7C38;}
+.colors1 .st6{fill:#C38A6D;}
+.colors1 .st7{fill:#956768;}
+.colors1 .st8{fill:#2D5368;}
+.colors1 .st9{fill:#662266;}
+.colors1 .st10{fill:#D796A5;}
+.colors1 .st11{fill:#D8D13C;}
+.colors1 .st12{fill:mediumturquoise;}
+.colors1 .st13{fill:coral;}
+.colors1 .st14{fill:cornflowerblue;}
+
+
+.reds .st0{fill:#AA3A13;}
+.reds .st1{fill:#AD1212;}
+.reds .st2{fill:#E05424;}
+.reds .st3{fill:#E06A46;}
+.reds .st4{fill:#E24723;}
+.reds .st5{fill:#892727;}
+.reds .st6{fill:#956768;}
+.reds .st7{fill:#99321A;}
+.reds .st8{fill:#C9360E;}
+.reds .st9{fill:#9B4C4C;}
+.reds .st10{fill:#CC6666;}
+.reds .st11{fill:#CC704C;}
+.reds .st12{fill:#CE604A;}
+.reds .st13{fill:#A84E36;}
+.reds .st14{fill:#A8603D;}
+
+
+.redsBlues .st0{fill:#E05424;}
+.redsBlues .st1{fill:#E06A46;}
+.redsBlues .st2{fill:#E24723;}
+.redsBlues .st3{fill:#23B3B3;}
+.redsBlues .st4{fill:#26D8D8;}
+.redsBlues .st5{fill:#CC704C;}
+.redsBlues .st6{fill:#CE604A;}
+.redsBlues .st7{fill:#0081B3;}
+.redsBlues .st8{fill:#0083C2;}
+.redsBlues .st9{fill:#008EB9;}
+.redsBlues .st10{fill:#0097B5;}
+.redsBlues .st11{fill:#009999;}
+.redsBlues .st12{fill:#009FC9;}
+.redsBlues .st13{fill:#00A3DB;}
+.redsBlues .st14{fill:#00AFEC;}
+.redsBlues .st15{fill:#00B3DC;}
+.redsBlues .st16{fill:#00EDED;}
+.redsBlues .st17{fill:#3ECCE2;}
+.redsBlues .st18{fill:#A1E1E8;}
+.redsBlues .st19{fill:#A55137;}
+.redsBlues .st20{fill:#DD816C;}
+.redsBlues .st21{fill:#449896;}
+
+
+.greens .st10{fill:#406325;}
+.greens .st11{fill:#B8C698;}
+.greens .st12{fill:#BCCD30;}
+.greens .st4{fill:#25351A;}
+.greens .st5{fill:#274936;}
+.greens .st6{fill:#5E7B38;}
+.greens .st8{fill:#406325;}
+.greens .st13{fill:#B8C698;}
+.greens .st7{fill:#BCCD30;}
+
+
+.greens2 .st1{fill:#406325;}
+.greens2 .st2{fill:#B8C698;}
+.greens2 .st3{fill:#BCCD30;}
+.greens2 .st4{fill:#5D8A3F;}
+.greens2 .st5{fill:#274936;}
+.greens2 .st6{fill:#5E7B38;}
+.greens2 .st8{fill:#5D8A3F;}
+.greens2 .st0{fill:#649257;}
+.greens2 .st7{fill:#006031;}
+
+
+/*SVG 1*********************************************************************************************************************/
+
+#hotElement .redLayer .st1 {
+	opacity: 0;
+	@include transition(opacity .5s ease .7s);
+}
+#hotElement .redLayer .st5 {
+	opacity: 0;
+	@include transition(opacity .5s ease .6s);
+}
+#hotElement .redLayer .st6 {
+	opacity: 0;
+	@include vendorize(transition, opacity .5s ease .5s);
+}
+#hotElement .redLayer .st19 {
+	opacity: 0;
+	@include vendorize(transition, opacity .5s ease .4s);
+}
+#hotElement .redLayer .st2 {
+	opacity: 0;
+	@include vendorize(transition, opacity .5s ease .3s);
+}
+#hotElement .redLayer .st0 {
+	opacity: 0;
+	@include vendorize(transition, opacity .5s ease .2s);
+}
+#hotElement .redLayer .st20 {
+	opacity: 0;
+	@include vendorize(transition, opacity .5s ease .1s);
+}
+
+#hotElement:hover .redLayer .st1 {
+	opacity: 1;
+	@include vendorize(transition, opacity .5s ease .1s);
+}
+#hotElement:hover .redLayer .st5 {
+	opacity: 1;
+	@include vendorize(transition, opacity .5s ease .2s);
+}
+#hotElement:hover .redLayer .st6 {
+	opacity: 1;
+	@include vendorize(transition, opacity .5s ease .3s);
+}
+#hotElement:hover .redLayer .st19 {
+	opacity: 1;
+	@include vendorize(transition, opacity .5s ease .4s);
+}
+#hotElement:hover .redLayer .st2 {
+	opacity: 1;
+	@include vendorize(transition, opacity .5s ease .5s);
+}
+#hotElement:hover .redLayer .st0 {
+	opacity: 1;
+	@include vendorize(transition, opacity .5s ease .6s);
+}
+#hotElement:hover .redLayer .st20 {
+	opacity: 1;
+	@include vendorize(transition, opacity .5s ease .7s);
+}
+
+#hotElement .blueLayer {
+	opacity: .3;
+	@include vendorize(transition, opacity .5s ease .4s);
+}
+#hotElement .blueLayer .st16, 
+#hotElement .blueLayer .st8, 
+#hotElement .blueLayer .st3, 
+#hotElement .blueLayer .st11 {
+	opacity: 1;
+	@include vendorize(transition, opacity 1s ease);
+}
+
+#hotElement:hover .blueLayer .st16,
+#hotElement:hover .blueLayer .st8,
+#hotElement:hover .blueLayer .st3,
+#hotElement:hover .blueLayer .st11 {
+	opacity: 0;
+	@include vendorize(transition, opacity 2s ease);
+}
+
+/*SVG 2************************************************************************************************************/
+
+#circusWheels:hover .circle1, 
+#circusWheels:hover .circle2, 
+#circusWheels:hover .circle3, 
+#circusWheels:hover .circle4, 
+#circusWheels:hover .circle5, 
+#circusWheels:hover .circle6 {
+	@include vendorize(transform, rotate(720deg) translate3d(0,0,0));
+	@include transition(transform 2s ease-out 1s);
+}
+#circusWheels:hover .circle7 {
+	@include vendorize(transform, rotate(1440deg) translate3d(0,0,0) scale(1.55));
+	@include transition(opacity 1s ease 1s, transform 3s ease);
+}
+/****************************************************/
+#circusWheels:hover .littleCircle1, 
+#circusWheels:hover .littleCircle2, 
+#circusWheels:hover .littleCircle3, 
+#circusWheels:hover .littleCircle4, 
+#circusWheels:hover .littleCircle5, 
+#circusWheels:hover .littleCircle6 {
+	@include vendorize(transform, rotate(1440deg) translate3d(0,0,0));
+	@include transition(transform 2s ease-out 1s);
+}
+/**************************************************/
+#circusWheels .circle1 {
+	@include transition(transform 2s ease-out);
+	@include vendorize(transform-origin, 115px 59px);
+}
+#circusWheels .circle2 {
+	@include transition(transform 2s ease-out);
+	@include vendorize(transform-origin, 140px 102px);
+}
+#circusWheels .circle3 {
+	@include transition(transform 2s ease-out);
+	@include vendorize(transform-origin, 65px 59px);
+}
+#circusWheels .circle4 {
+	@include transition(transform 2s ease-out);
+	@include vendorize(transform-origin, 38px 102px);
+}
+#circusWheels .circle5 {
+	@include transition(transform 2s ease-out);
+	@include vendorize(transform-origin, 64px 145px);
+}
+#circusWheels .circle6 {
+	@include transition(transform 2s ease-out);
+	@include vendorize(transform-origin, 115px 145px);
+}
+#circusWheels .circle7 {
+	opacity: 1;
+	@include transition(transform 2s ease-out, opacity 1s ease);
+	@include vendorize(transform-origin, 89px 102px);
+	// position: absolute;
+	// top: 2px;
+}
+/*******************************************/
+#circusWheels .littleCircle1 {
+	@include transition(transform 2s ease-out);
+	@include vendorize(transform-origin, 90px 29px);
+}
+#circusWheels .littleCircle2 {
+	@include transition(transform 2s ease-out);
+	@include vendorize(transform-origin, 26px 65px);
+}
+#circusWheels .littleCircle3 {
+	@include transition(transform 2s ease-out);
+	@include vendorize(transform-origin, 25px 138px);
+}
+#circusWheels .littleCircle4 {
+	@include transition(transform 2s ease-out);
+	@include vendorize(transform-origin, 153px 139px);
+}
+#circusWheels .littleCircle5 {
+	@include transition(transform 2s ease-out);
+	@include vendorize(transform-origin, 89px 175px);
+}
+#circusWheels .littleCircle6 {
+	@include transition(transform 2s ease-out);
+	@include vendorize(transform-origin, 153px 66px);
+}
+/****************************************/
+
+#circusWheels:hover .st1 {
+	fill: orange;
+	opacity: 1;	
+}
+#circusWheels:hover .st0,
+#circusWheels:hover .st2 {
+	@include transition(fill 2s ease, opacity .5s ease 2s);
+}
+#circusWheels:hover .st3 {
+	fill: yellow;	
+}
+#circusWheels:hover .st4 {
+	fill: lightgreen;	
+}
+#circusWheels:hover .st5 {
+	fill: #ff3366;	
+}
+#circusWheels:hover .st6 {
+	fill: #66bbff;	
+}
+#circusWheels:hover .st7 {
+	fill: silver;
+}
+#circusWheels:hover .st8 {
+	fill: #ff6677;
+	opacity: 1;
+}
+#circusWheels:hover .st9, 
+#circusWheels:hover .st10,
+#circusWheels:hover .st11, 
+#circusWheels:hover .st12, 
+#circusWheels:hover .st13 {
+	fill: white;
+	opacity: 1;
+}
+#circusWheels:hover .st14 {
+	fill: mediumturquoise;
+	opacity: 1;
+}
+
+/*Transitions 2********************************************/
+
+#circusWheels .st0 {
+	@include transition(fill 2s ease, opacity 5s ease);
+	opacity: 1;
+	fill: lightyellow;
+}
+#circusWheels .st1 {
+	@include transition(fill 3s ease, opacity 5s ease);
+	fill: darkred;
+}
+#circusWheels .st2 {
+	@include transition(fill 3s ease, opacity 5s ease);
+	fill: #ff4444;
+	opacity: .8;
+}
+#circusWheels .st3 {
+	@include transition(fill 4s ease, opacity 5s ease 2s);
+	fill: #9988aa;	
+}
+#circusWheels .st4 {
+	@include transition(fill 2s ease, opacity 5s ease 2s);	
+}
+#circusWheels .st5 {
+	@include transition(fill 2s ease, opacity 5s ease 2s);	
+}
+#circusWheels .st6 {
+	@include transition(fill 2s ease, opacity 5s ease 2s);	
+}
+#circusWheels .st7 {
+	@include transition(fill 4s ease, opacity 5s ease 2s);	
+}
+#circusWheels .st8,
+#circusWheels .st9,
+#circusWheels .st10,
+#circusWheels .st11,
+#circusWheels .st12 {
+	@extend %slowFill;
+}
+#circusWheels .st13 {
+	@extend %slowFill;
+	fill: #ff3355;
+}
+#circusWheels .st14 {
+	@extend %slowFill;
+	fill: pink;
+}
+
+/*SVG 3**************************************************************************************************************/
+
+#macrame polygon {
+	stroke: #333;
+}
+#macrame:hover .hexagon3 {
+	@include vendorize(transform, rotate(30deg) translate3d(0,0,0));
+}
+#macrame .hexagon3 {
+	@include transition(transform 1s ease);
+	@include vendorize(transform-origin, 84px 105px);
+}
+#macrame:hover .st0 {
+	fill: #9e5f52;
+	opacity: .8;
+}
+#macrame:hover .st1 {
+	fill: white;
+	@include transition(fill 3s ease, opacity 5s ease, transform 2s ease);
+}
+#macrame:hover .st2 {
+	opacity: .8;
+}
+#macrame:hover .st3 {
+}
+#macrame:hover .st4 {
+	fill: white;
+}
+#macrame:hover .st5 {
+	fill: black;
+}
+#macrame:hover .st6 {
+	fill: white;
+}
+#macrame:hover .st7 {
+	opacity: .7;
+}
+#macrame:hover .st8 {
+	opacity: .8;
+}
+#macrame:hover .st9 {
+	fill: white;
+}
+#macrame:hover .st10 {
+	fill: black;
+}
+#macrame:hover .st11 {
+	fill: white;
+}
+#macrame:hover .st12 {
+	fill: black;
+	opacity: .8;
+}
+#macrame:hover .st13 {
+	opacity: .8;
+}
+#macrame:hover .st14 {
+	opacity: .8;
+}
+
+/*Transitions 3****************************************************/
+
+#macrame .st0 {
+	@include transition(fill 2s ease, opacity 5s ease);
+	opacity: 0;
+}
+#macrame .st1 {
+	@include transition(fill 3s ease, opacity 5s ease);
+	opacity: 1;
+}
+#macrame .st2 {
+	@include transition(fill 3s ease, opacity 5s ease);
+	opacity: 0;
+}
+#macrame .st3 {
+	@include transition(fill 6s ease, opacity 5s ease);
+}
+#macrame .st4 {
+	@include transition(transform 2s ease, fill 2s ease);
+}
+#macrame .st5 {
+	@include transition(transform 2s ease, fill 2s ease);
+}
+#macrame .st6 {
+	@include transition(transform 2s ease, fill 2s ease);
+}
+#macrame .st7 {
+	@include transition(fill 3s ease, opacity 5s ease);
+}
+#macrame .st8 {
+	@include transition(fill 3s ease, opacity 5s ease);
+}
+#macrame .st9 {
+	@include transition(fill 3s ease, opacity 5s ease);
+	opacity: 1;
+}
+#macrame .st10 {
+	@include transition(fill 5s ease, opacity 5s ease);
+}
+#macrame .st11 {
+	@include transition(fill 6s ease, opacity 5s ease);
+}
+#macrame .st12 {
+	@include transition(fill 6s ease, opacity 5s ease);
+}
+#macrame .st13 {
+	@include transition(fill 6s ease, opacity 5s ease);
+}
+#macrame .st14 {
+	@include transition(fill 6s ease, opacity 5s ease);
+}
+
+#macrame g {
+	@include transition(transform 2s ease-out);
+}
+#macrame .circle1 {
+	@include vendorize(transform-origin, 115px 58px);
+}
+#macrame .circle2 {
+	@include vendorize(transform-origin, 140px 102px);
+}
+#macrame .circle3 {
+	@include vendorize(transform-origin, 65px 58px);
+}
+#macrame .circle4 {
+	@include vendorize(transform-origin, 40px 101px);
+}
+#macrame .circle5 {
+	@include vendorize(transform-origin, 65px 145px);
+}
+#macrame .circle6 {
+	@include vendorize(transform-origin, 115px 145px);
+}
+
+#macrame:hover g.circle1, 
+#macrame:hover g.circle2, 
+#macrame:hover g.circle3, 
+#macrame:hover g.circle4, 
+#macrame:hover g.circle5, 
+#macrame:hover g.circle6 {
+	@include vendorize(transform, rotate(360deg) translate3d(0,0,0));
+	@include transition(transform 1.5s ease-out);
+}
+
+
+/*SVG 4**************************************************************************************************************/
+
+#threeHearts {
+	// @extend %hardwareAcc;
+}
+#threeHearts g {
+	opacity: .9;
+	@include transition(opacity 1s ease, transform 3s ease);
+	@include vendorize(transform-origin, 50% 50%);
+
+}
+#threeHearts:active,
+#threeHearts:hover g:not(.noTransform) {
+	// opacity: .6;
+	@include vendorize(transform, rotate(360deg));
+}
+#threeHearts g.topHeart {
+	opacity: 0.7;
+	@include vendorize(transform-origin, 94.6px 108.23px);
+}
+#threeHearts g.topHeart {
+}
+
+
+/*SVG 5*****************************************************************************************************************/
+
+#moth #bigDisk {
+	@include transition(transform 2s ease-out, opacity 2s ease);
+	@include vendorize(transform-origin, 88px 102px);
+	opacity: .2;
+}
+#moth:hover #bigDisk {
+	// opacity: .4;
+	@include vendorize(transform, rotate(360deg));
+}
+/*********************************************************/
+#moth #smallDisk {
+	@include transition(transform 2s ease, opacity 2s ease);
+	@include vendorize(transform-origin, 90px);
+	opacity: .3;
+}
+#moth:hover #smallDisk {
+	// opacity: .4;
+	@include vendorize(transform, rotateY(360deg));
+}
+/**********************************************************/
+#moth #yShape {
+	@include transition(transform 2.5s ease, opacity 2s ease);
+	@include vendorize(transform-origin, 89px 102px);
+	opacity: .4;
+}
+#moth:hover #yShape {
+	// opacity: .6;
+	@include vendorize(transform, rotate(1080deg));
+}
+
+/*SVG 6******************************************************************************************************************/
+
+#flowerCube:hover {
+	polygon, g {
+		@extend %hardwareAcc;
+	}
+}
+#flowerCube:hover .st0 {
+	fill: #ffffcc;
+	@include vendorize(transform, rotate3d(1, 1, 0, 360deg));
+	opacity: 1;
+}
+#flowerCube:hover .st1 {
+	opacity: 0;
+}
+#flowerCube:hover .st2 {
+	fill: #EBF476;
+	opacity: 1;
+	@include vendorize(transform, rotate3d(4, 4, 4, 360deg));
+}
+#flowerCube:hover .st3 {
+	fill: #8EB936;
+	@include vendorize(transform, rotate3d(3, 2, 1, 360deg));
+}
+#flowerCube:hover .st4 {
+	fill: #ffffcc;
+	opacity: 1;
+	@include vendorize(transform, rotate3d(1, 1, 0, 360deg));
+	}
+#flowerCube:hover .st5 {
+	fill: #ffffcc;
+	opacity: 1;
+	@include vendorize(transform, rotate3d(1, 1, 0, 360deg));
+}
+#flowerCube:hover .st6 {
+	fill: #ffffcc;
+	opacity: 1;
+	@include vendorize(transform, rotate3d(1, 1, 0, 360deg));
+}
+#flowerCube:hover .st7 {
+	fill: #659357;
+	@include vendorize(transform, rotate3d(1, 1, 0, 360deg));
+}
+#flowerCube:hover .st8 {
+	fill: #086D18;
+	@include vendorize(transform, rotate3d(1, 1, 0, 360deg));
+}
+#flowerCube:hover .st9 {
+	opacity: 0;
+}
+#flowerCube:hover .st10 {
+	fill: #ffffcc;
+	opacity: 1;
+	@include vendorize(transform, rotate3d(1, 1, 0, 360deg));
+}
+#flowerCube:hover .st11 {
+	fill: #ffffcc;
+	@include vendorize(transform, rotate3d(1, 1, 0, 360deg));
+	opacity: 1;
+}
+#flowerCube:hover .st12 {
+	fill: #ffffcc;
+	opacity: 1;
+	@include vendorize(transform, rotate3d(1, 1, 0, 360deg));
+}
+#flowerCube:hover .st13 {
+	fill: #CEEA88;
+	@include vendorize(transform, rotate3d(1, 1, 0, 360deg));
+}
+#flowerCube:hover .st14 {
+	fill: #99cc44;
+	@include vendorize(transform, rotate3d(3, 2, 1, 360deg));
+}
+
+/*Transitions 6*****************************************/
+
+#flowerCube .st0 {
+	@include transition(fill 2s ease, opacity 5s ease, transform 2s ease);
+	fill: hsla(0,0%,100%,0);
+}
+#flowerCube .st1 {
+	@include transition(fill 3s ease, opacity 3s ease, transform 2s ease);
+	fill: #25351a;
+	opacity: 1;
+}
+#flowerCube .st2 {
+	fill: #ffffcc;
+	opacity: 0;
+	@include transition(fill 3s ease, opacity 3s ease, transform 2s ease);
+}
+#flowerCube .st3 {
+	@include transition(transform 2s ease, fill 4s ease);
+}
+#flowerCube .st7 {
+	@include transition(transform 2s ease, fill 4s ease);
+}
+#flowerCube .st8 {
+	@include transition(transform 2s ease, fill 6s ease);
+}
+#flowerCube .st9 {
+	fill: #25351a;
+	opacity: 1;
+	@include transition(fill 3s ease, opacity 3s ease, transform 2s ease);
+}
+#flowerCube .st4,
+#flowerCube .st5,
+#flowerCube .st6,
+#flowerCube .st10,
+#flowerCube .st11,
+#flowerCube .st12 {
+	fill: hsla(0,0%,100%,0);
+	@include transition (fill 2s ease, opacity 2s ease, transform 2s ease);
+}
+#flowerCube .st13,
+#flowerCube .st14 {
+	@include transition (transform 2s ease, opacity 2s ease, fill 2s ease);
+}
+
+/*Media Queries*************************************************************************************************************/
+
+@media screen and (max-width: 900px) {
+
+	.wrapper {
+		border-radius: 0;
+		margin: 150px 0px 0px 0px;
+		padding: 70px 35px;
+	}
+	.artBox {
+		width: calc(50% - 10px);
+		border-radius: 10px;
+		margin: 5px 5px 40px;
+	}
+	h1 {
+		font-size: 2.6rem;
+		margin-top: 40px;
+	}
+	header {
+		padding: 35px 40px;
+		height: 150px;
+			img {
+				left: -175px;
+				top: -77px;
+			}
+	}
+	h2.firstTitle {
+		font-size: 1.7rem;
+	}
+	.fixedMenu {
+		top: 165px;
+			&:hover {
+				width: 450px;
+			}
+			&:hover .topNav > li:first-child {
+				margin-left: 40px;
+			}
+	}
+	.menu > ul > li > a {
+		padding: 26px 4px;
+		font-size: .8rem;
+	}
+	.dots img {
+		width: 25px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+
+	.artBox {
+		width: calc(100% - 10px);	
+		border-radius: 5px;
+		margin: 5px 5px 40px;
+		padding: 40px;
+	}
+	header {
+		padding-top: 30px;
+			img {
+			display: none;
+		}
+	}
+	h1 {
+		text-align: center;
+		max-width: 100%;
+		margin-top: 15px;
+		font-size: 2.2rem;
+		float: none;
+		line-height: 3rem;
+	}
+	h2.firstTitle {
+		margin-top: 40px;
+	}
+	.fixedMenu {
+		top: 150px;
+			&:hover {
+			width: 100%;
+				.menu {
+					width: 100%;
+					left: 0px;
+					border-radius: 0;
+				}
+				.topNav > li:first-child {
+					margin-left: 20px;
+				}
+			}
+	}
+	.menu {
+		border-top-left-radius: 0;
+	}
+	.topNav > li {
+		&> a {
+		padding: 26px 5px;
+		font-size: .75rem;
+		}
+		&:first-child {
+		@include transition(.8s ease);
+		}
+	}
+	.dots {
+		min-width: 33%;
+			img {
+				width: 20px;
+			}
+	} 
+}
+@media screen and (min-width: 1480px) {
+
+	body .wrapper {
+		width: 1280px;
+		margin: 220px auto 80px auto;;
+	}
+}
+
