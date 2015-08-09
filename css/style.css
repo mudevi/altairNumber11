@@ -169,6 +169,16 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 svg:hover g,
 svg:hover polygon,
 svg:active g, svg:active polygon, #flowerCube:hover polygon, #flowerCube:hover g {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
   -ms-perspective: 1000;
@@ -1380,10 +1390,6 @@ span.bookTitle {
 }
 
 /*SVG 3**************************************************************************************************************/
-#macrame polygon {
-  stroke: #333;
-}
-
 #macrame:hover .hexagon3 {
   -webkit-transform: rotate(30deg) translate3d(0, 0, 0);
   -moz-transform: rotate(30deg) translate3d(0, 0, 0);

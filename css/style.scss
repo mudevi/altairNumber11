@@ -647,9 +647,9 @@ span.bookTitle {
 
 /*SVG 3**************************************************************************************************************/
 
-#macrame polygon {
-	stroke: #333;
-}
+// #macrame polygon {
+// 	stroke: #333;
+// }
 #macrame:hover .hexagon3 {
 	@include vendorize(transform, rotate(30deg) translate3d(0,0,0));
 }

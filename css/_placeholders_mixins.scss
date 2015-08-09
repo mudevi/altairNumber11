@@ -13,6 +13,8 @@
 // }
 
 %hardwareAcc {
+    @include vendorize(transform, translate3d(0,0,0));
+    @include vendorize(backface-visibility, hidden);
     @include vendorize(perspective, 1000);
     will-change: opacity, fill, transform;
 }
