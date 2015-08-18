@@ -395,7 +395,7 @@ footer a i {
 
 footer p {
   width: 125px;
-  margin: auto;
+  margin: 3px auto;
   clear: both;
   color: #666;
   font-size: 12px;
@@ -404,7 +404,7 @@ footer p {
 .twitterIcon {
   width: 30px;
   height: 30px;
-  margin: 60px auto 5px;
+  margin: 50px auto 5px;
 }
 
 /*Fixed Menu*****************************************************************************************************************/
@@ -1279,6 +1279,10 @@ span.bookTitle {
   transition: fill 2s ease, opacity 0.5s ease 2s;
 }
 
+#circusWheels:hover .st2 {
+  fill: #55dd44;
+}
+
 #circusWheels:hover .st3 {
   fill: yellow;
 }
@@ -1325,7 +1329,7 @@ span.bookTitle {
   -o-transition: fill 2s ease, opacity 5s ease;
   transition: fill 2s ease, opacity 5s ease;
   opacity: 1;
-  fill: lightyellow;
+  fill: mediumturquoise;
 }
 
 #circusWheels .st1 {
@@ -1333,7 +1337,7 @@ span.bookTitle {
   -moz-transition: fill 3s ease, opacity 5s ease;
   -o-transition: fill 3s ease, opacity 5s ease;
   transition: fill 3s ease, opacity 5s ease;
-  fill: darkred;
+  fill: coral;
 }
 
 #circusWheels .st2 {
@@ -1341,7 +1345,7 @@ span.bookTitle {
   -moz-transition: fill 3s ease, opacity 5s ease;
   -o-transition: fill 3s ease, opacity 5s ease;
   transition: fill 3s ease, opacity 5s ease;
-  fill: #ff4444;
+  fill: hotpink;
   opacity: .8;
 }
 
@@ -1350,7 +1354,7 @@ span.bookTitle {
   -moz-transition: fill 4s ease, opacity 5s ease 2s;
   -o-transition: fill 4s ease, opacity 5s ease 2s;
   transition: fill 4s ease, opacity 5s ease 2s;
-  fill: #9988aa;
+  fill: #ffaa66;
 }
 
 #circusWheels .st4 {
@@ -1386,7 +1390,7 @@ span.bookTitle {
 }
 
 #circusWheels .st14 {
-  fill: pink;
+  fill: #667766;
 }
 
 /*SVG 3**************************************************************************************************************/
@@ -1688,10 +1692,10 @@ span.bookTitle {
 
 /*SVG 5*****************************************************************************************************************/
 #moth #bigDisk {
-  -webkit-transition: -webkit-transform 2s ease-out, opacity 2s ease;
-  -moz-transition: -moz-transform 2s ease-out, opacity 2s ease;
-  -o-transition: -o-transform 2s ease-out, opacity 2s ease;
-  transition: transform 2s ease-out, opacity 2s ease;
+  -webkit-transition: -webkit-transform 3s ease-out, opacity 2s ease;
+  -moz-transition: -moz-transform 3s ease-out, opacity 2s ease;
+  -o-transition: -o-transform 3s ease-out, opacity 2s ease;
+  transition: transform 3s ease-out, opacity 2s ease;
   -webkit-transform-origin: 88px 102px;
   -moz-transform-origin: 88px 102px;
   -ms-transform-origin: 88px 102px;
@@ -1701,6 +1705,7 @@ span.bookTitle {
 }
 
 #moth:hover #bigDisk {
+  opacity: .4;
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
@@ -1710,10 +1715,10 @@ span.bookTitle {
 
 /*********************************************************/
 #moth #smallDisk {
-  -webkit-transition: -webkit-transform 2s ease, opacity 2s ease;
-  -moz-transition: -moz-transform 2s ease, opacity 2s ease;
-  -o-transition: -o-transform 2s ease, opacity 2s ease;
-  transition: transform 2s ease, opacity 2s ease;
+  -webkit-transition: -webkit-transform 3s ease, opacity 2s ease;
+  -moz-transition: -moz-transform 3s ease, opacity 2s ease;
+  -o-transition: -o-transform 3s ease, opacity 2s ease;
+  transition: transform 3s ease, opacity 2s ease;
   -webkit-transform-origin: 90px;
   -moz-transform-origin: 90px;
   -ms-transform-origin: 90px;
@@ -1723,6 +1728,7 @@ span.bookTitle {
 }
 
 #moth:hover #smallDisk {
+  opacity: .4;
   -webkit-transform: rotateY(360deg);
   -moz-transform: rotateY(360deg);
   -ms-transform: rotateY(360deg);
@@ -1732,10 +1738,10 @@ span.bookTitle {
 
 /**********************************************************/
 #moth #yShape {
-  -webkit-transition: -webkit-transform 2.5s ease, opacity 2s ease;
-  -moz-transition: -moz-transform 2.5s ease, opacity 2s ease;
-  -o-transition: -o-transform 2.5s ease, opacity 2s ease;
-  transition: transform 2.5s ease, opacity 2s ease;
+  -webkit-transition: -webkit-transform 3.5s ease, opacity 2s ease;
+  -moz-transition: -moz-transform 3.5s ease, opacity 2s ease;
+  -o-transition: -o-transform 3.5s ease, opacity 2s ease;
+  transition: transform 3.5s ease, opacity 2s ease;
   -webkit-transform-origin: 89px 102px;
   -moz-transform-origin: 89px 102px;
   -ms-transform-origin: 89px 102px;
@@ -1745,6 +1751,7 @@ span.bookTitle {
 }
 
 #moth:hover #yShape {
+  opacity: .6;
   -webkit-transform: rotate(1080deg);
   -moz-transform: rotate(1080deg);
   -ms-transform: rotate(1080deg);

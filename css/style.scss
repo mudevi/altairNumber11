@@ -128,7 +128,7 @@ footer {
 		}
 		p {
 			width: 125px;
-			margin: auto;
+			margin: 3px auto;
 			clear: both;
 			color: #666;
 			font-size: 12px;
@@ -137,7 +137,7 @@ footer {
 .twitterIcon {
 	width: 30px;
 	height: 30px;
-	margin: 60px auto 5px;
+	margin: 50px auto 5px;
 }
 
 /*Fixed Menu*****************************************************************************************************************/
@@ -565,6 +565,9 @@ span.bookTitle {
 #circusWheels:hover .st2 {
 	@include transition(fill 2s ease, opacity .5s ease 2s);
 }
+#circusWheels:hover .st2 {
+	fill: #55dd44;
+}
 #circusWheels:hover .st3 {
 	fill: yellow;	
 }
@@ -602,20 +605,20 @@ span.bookTitle {
 #circusWheels .st0 {
 	@include transition(fill 2s ease, opacity 5s ease);
 	opacity: 1;
-	fill: lightyellow;
+	fill: mediumturquoise;
 }
 #circusWheels .st1 {
 	@include transition(fill 3s ease, opacity 5s ease);
-	fill: darkred;
+	fill: coral;
 }
 #circusWheels .st2 {
 	@include transition(fill 3s ease, opacity 5s ease);
-	fill: #ff4444;
+	fill: hotpink;
 	opacity: .8;
 }
 #circusWheels .st3 {
 	@include transition(fill 4s ease, opacity 5s ease 2s);
-	fill: #9988aa;	
+	fill: #ffaa66;	
 }
 #circusWheels .st4 {
 	@include transition(fill 2s ease, opacity 5s ease 2s);	
@@ -642,7 +645,7 @@ span.bookTitle {
 }
 #circusWheels .st14 {
 	@extend %slowFill;
-	fill: pink;
+	fill: #667766;
 }
 
 /*SVG 3**************************************************************************************************************/
@@ -817,32 +820,32 @@ span.bookTitle {
 /*SVG 5*****************************************************************************************************************/
 
 #moth #bigDisk {
-	@include transition(transform 2s ease-out, opacity 2s ease);
+	@include transition(transform 3s ease-out, opacity 2s ease);
 	@include vendorize(transform-origin, 88px 102px);
 	opacity: .2;
 }
 #moth:hover #bigDisk {
-	// opacity: .4;
+	opacity: .4;
 	@include vendorize(transform, rotate(360deg));
 }
 /*********************************************************/
 #moth #smallDisk {
-	@include transition(transform 2s ease, opacity 2s ease);
+	@include transition(transform 3s ease, opacity 2s ease);
 	@include vendorize(transform-origin, 90px);
 	opacity: .3;
 }
 #moth:hover #smallDisk {
-	// opacity: .4;
+	opacity: .4;
 	@include vendorize(transform, rotateY(360deg));
 }
 /**********************************************************/
 #moth #yShape {
-	@include transition(transform 2.5s ease, opacity 2s ease);
+	@include transition(transform 3.5s ease, opacity 2s ease);
 	@include vendorize(transform-origin, 89px 102px);
 	opacity: .4;
 }
 #moth:hover #yShape {
-	// opacity: .6;
+	opacity: .6;
 	@include vendorize(transform, rotate(1080deg));
 }
 
