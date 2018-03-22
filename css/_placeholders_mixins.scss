@@ -71,7 +71,6 @@
     @return $prefixed;
 }
 
-
 @mixin transition($values...) { 
     $transitions: ();
     @each $declaration in $values {
